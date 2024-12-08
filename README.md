@@ -1,5 +1,6 @@
-# AI_bootcamp_proj2
-Stroke survival prediction : will the patient live or die within 6 months ?
+# AI bootcamp project 2
+# Stroke survival prediction
+will the patient live or die within 6 months ?
 ______________________________________________________________________________________________________________________________
 
 ## Introduction
@@ -39,17 +40,4 @@ avoid unnecessary complexity of the analysis.
    Missing values were handled by ...
    Categorical variables were encoded using one hot coding.
 
-6. License
-
-# Note :
-Hello team! I have some comments that concern the data and our question, I would like to share it with you , based on what I understood and analyzed there are four types of stroke (final diagnostic) :
-  DDIAGISC Ischemic stroke (Y/N/U=unknown)
-  DDIAGHA Hemorrhagic stroke(Y/N/U=unknown) 
-  DDIAGUN Indeterminate stroke(Y/N/U=unknown) 
-  DNOSTRK Not a stroke(Y/N/U=unknown) 
-
-same with Indicator variables for specific causes of death after 6 months , there are 17 different variables.
- 
-At the end we need one column that represent the y  also we need correlated features.
-
-my plan is to ...
+6. License: 
