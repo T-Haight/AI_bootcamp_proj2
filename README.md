@@ -2,7 +2,6 @@
 # Stroke survival prediction
 will the patient live or die within 6 months ?
 ______________________________________________________________________________________________________________________________
-
 ## Introduction
 
 Stroke carries a high risk of death. Survivors can experience loss of vision and/or speech, paralysis and 
@@ -21,6 +20,20 @@ using machine learning models in order to bring awareness to individuals and hel
 insurers estimate risk and cost.
 ________________________________________________________________________________________________________________________________
 
+## Installation
+To run this project you need to install python 3.7 or higher,also you need to instal the packages and libraries bellow:
+```python
+pip install numpy pandas
+```
+```python
+conda install matplotlib
+```
+```python
+pip install -U scikit-learn
+```
+```python
+pip install imblearn
+```
 ## Dataset
 
 1. Dataset description:
