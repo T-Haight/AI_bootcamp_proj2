@@ -8,6 +8,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, GradientBoostingClassifier, AdaBoostClassifier
 from statsmodels.stats.outliers_influence import variance_inflation_factor
+from sklearn.model_selection import GridSearchCV
 import numpy as np
 import pandas as pd
 import warnings
@@ -35,6 +36,11 @@ def preprocess_data(df, target_column):
 
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+
+    #Encode X_train and X_test
+    le = LabelEncoder()
+    X_train = X_train.apply(le.fit_transform)
+    X_test = X_test.apply(le.fit_transform)
 
     return X_train, X_test, y_train, y_test
 
@@ -78,7 +84,8 @@ def get_best_pipeline(pipelines, df, target_column):
     best_pipeline = None
     best_score = 0  
     for pipeline in pipelines:
-        print(f"{pipeline.named_steps['clf']}")
+        model_name = pipeline.named_steps['clf']
+        print(f"{model_name}")
         pipeline.fit(X_train, y_train)
         score = check_metrics(X_test, y_test, pipeline)
         if score > best_score:
