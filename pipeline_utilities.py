@@ -1,29 +1,14 @@
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import accuracy_score, mean_squared_error, balanced_accuracy_score
-from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder, OrdinalEncoder
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LogisticRegression, Lasso, Ridge, RidgeCV, LinearRegression, SGDRegressor
+from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC 
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, GradientBoostingClassifier, AdaBoostClassifier
-from statsmodels.stats.outliers_influence import variance_inflation_factor
-from sklearn.model_selection import GridSearchCV
-import numpy as np
-import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
-
-def drop_top_vif(df):
-    # Calculate the VIF for each column in the dataframe
-    vif = [variance_inflation_factor(df.values, i) for i in range(df.shape[1])]
-    # Get the maximum VIF value (ignore nan values)
-    max_vif = np.max([vif_value for vif_value in vif if not pd.isna(vif_value)])
-    # Get the index of the maximum VIF value
-    max_index = vif.index(max_vif)
-
-    return df.drop(columns=df.columns[max_index], inplace=True)
-
 
 def preprocess_data(df, target_column):
     """
@@ -58,7 +43,6 @@ def check_metrics(X_test, y_test, model):
     """
     Checks various accuracy and error metrics of a model.
     """
-    # Use the pipeline to make predictions
     y_pred = model.predict(X_test)
 
     # Print out the MSE, r-squared, accuracy, and cross val values
