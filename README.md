@@ -8,6 +8,11 @@
 2. [Objective](https://github.com/T-Haight/AI_bootcamp_proj2/edit/Asmaa/README.md#objective)
 3. [Installation](https://github.com/T-Haight/AI_bootcamp_proj2/edit/Asmaa/README.md#installation)
 4. [Dataset](https://github.com/T-Haight/AI_bootcamp_proj2/edit/Asmaa/README.md#dataset)
+5. [Model Selection and Training](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#model-selection-and-training)
+6. [Model Evaluation](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#model-evaluation)
+7. [Primary Results](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#primary-results)
+8. [Obstacles and Future Work](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#obstacles-and-future-work)
+
 
 ## Introduction
 
