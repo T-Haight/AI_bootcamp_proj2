@@ -10,7 +10,7 @@
 4. [Dataset](https://github.com/T-Haight/AI_bootcamp_proj2/edit/Asmaa/README.md#dataset)
 5. [Model Selection and Training](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#model-selection-and-training)
 6. [Model Evaluation](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#model-evaluation)
-7. [Primary Results](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#primary-results)
+7. [Results](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#primary-results)
 8. [Obstacles and Future Work](https://github.com/T-Haight/AI_bootcamp_proj2/blob/Asmaa/README.md#obstacles-and-future-work)
 
 
@@ -55,7 +55,7 @@ pip install seaborn
 ### Steps to run the program 
 1. Clone the repository.
 2. Navigate to the project directory.
-3. Run the jupyter notebook file (with VS Code or colab)
+3. Run the jupyter notebook file (with VS Code or colab).
 
 ## Dataset
 
@@ -70,7 +70,13 @@ avoid unnecessary complexity of the analysis.
 
 3. Features:
    * Before the data clean and selection: [Columns names and comments](https://trialsjournal.biomedcentral.com/articles/10.1186/1745-6215-12-101/tables/2)
-   * After the data clean and selection:
+   * After the data clean and selection:  ['SEX', 'AGE', 'RSLEEP', 'RATRIAL', 'RCT', 'RVISINF', 'RSBP', 'RCONSC',
+       'RDEF1', 'RDEF2', 'RDEF3', 'RDEF4', 'RDEF5', 'RDEF6', 'RDEF7', 'RDEF8',
+       'STYPE', 'RXASP', 'DASP14', 'DASPLT', 'ONDRUG', 'DAP', 'DOAC', 'DGORM',
+       'DSTER', 'DCAA', 'DMAJNCH', 'DDIAGISC', 'DDIAGHA', 'DDIAGUN', 'DCAREND',
+       'DHAEMD', 'DTHROMB', 'DNOSTRK', 'DRSISC', 'DRSH', 'DRSUNK', 'DPE',
+       'DALIVE', 'CNTRYNUM', 'OCCODE']
+
 
 4. Size:
    * Before the data clean and selection: 19435 rows × 112 columns
@@ -99,22 +105,24 @@ avoid unnecessary complexity of the analysis.
   * Gradient Boosting Classifier
   * AdaBoost Classifier
 * Model selected:
-  * Gradient Boosting Classifier: it has the best Accuracy Score 87.1% . 
-
+  * Gradient Boosting Classifier: it has the best Accuracy Score 87.3% . 
+  * Hyperparameter tuning.
 ## Model Evaluation
-
+* We used: 
+  * Confusion Matrix.
+  * Classification Report.
 * *Good performance for Survival Prediction*, the model is performing well in predicting survival(class 1) with high precision, recall and F1-score. This means it's generally accurate in identifiying patients who will survive.
 * *Lower perforance for Death Prediction*, the model is less accurate in predicting death (class 0), particularly in terms of recall. This indicates that it's missing a significant portion of patients who will actully die within 6 months.
 
-## Primary Results:
+## Results:
 
 After a few adjustments, the result that we received through the Gradient Boosting Classifier was an 87.1% accuracy score. This implies that we are able to predict future outcomes of patients in a 6-month time period utilizing factors recorded within the first two weeks of an acute stroke.
 
 ## Obstacles and Future Work:
 
-* Continious correction of the data and figures (Imbalanced data)
+* Continious correction of the data and figures.
 * Hyperparameter Scoring (score was dropped).
-* Two rounds of cleanup (Removing more columns and redundancy)
+* Two rounds of cleanup (Removing more columns and redundancy).
 * Ultimate Result: 87.3%
 * The model is reasonably good at predicting stroke survival but struggles more with predicting death more likely due to class imbalanced in the data. if we had more time we would use resampling techniques.
 
