@@ -66,7 +66,7 @@ data and over 99% complete follow-up data.For the purposes of our analysis, we c
 features from the dataset that were revelant to our objectives, by focusing on these essential columns we 
 avoid unnecessary complexity of the analysis.
 
-2. Source : [open the link here](http://www.trialsjournal.com/content/12/1/101)
+2. Source : [Sandercock et al.: The International Stroke Trial database. Trials 2011 12:101.](https://trialsjournal.biomedcentral.com/articles/10.1186/1745-6215-12-101)
 
 3. Features:
    * Before the data clean and selection: [Columns names and comments](https://trialsjournal.biomedcentral.com/articles/10.1186/1745-6215-12-101/tables/2)
