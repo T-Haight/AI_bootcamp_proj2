@@ -1,4 +1,6 @@
 # AI bootcamp project 2 : Stroke survival prediction
+<img src="https://github.com/user-attachments/assets/eaf8df41-a371-4d96-a0f5-d38c5b0f9f06" width=700 height=600>
+
 ### What are the potential outcomes of someone experiencing an acute stroke at the end of a 6-month period?
 * What effect this mortality rate?
 * How can we use factors to predict potential outcome?
